@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+    --Linear-gradient: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --Red: hsl(0, 100%, 66%)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0;
+}
+
+.left-side {
+    flex-basis: 30%;
+    height: 100%;
+    background: url('images/bg-main-desktop.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.right-side {
+    flex-basis: 70%;
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    font-size: .9rem;
+    border: 1px solid var(--Light-grayish-violet);
+    border-radius: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus {
+    outline: 0;
+    border-color: var(--Linear-gradient);
+}
+
+::placeholder {
+    color: var(--Light-grayish-violet);
+}
+
+label {
+    text-transform: uppercase;
+    font-size: .8rem;
+    margin-bottom: .5rem;
+    color: var(--Very-dark-violet);
+}
+
+.expcvc {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+} 
+
+.exp {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.exp-inputs {
+    display: flex;
+    flex-direction: row;
+    column-gap: .5rem;
+}
+
+.cvc {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#month {
+    flex: 1;
+}
+
+#year {
+    flex: 1;
+}
+
+#confirm-btn {
+    margin-top: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: var(--Light-grayish-violet);
+    background: var(--Very-dark-violet);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.front-part {
+    position: absolute;
+    top: 150px;
+    left: 160px;
+    width: 400px;
+    height: 220px;
+    background-image: url(images/bg-card-front.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.back-part {
+    position: absolute;
+    bottom: 140px;
+    left: 260px;
+    width: 400px;
+    height: 220px;
+    background-image: url(images/bg-card-back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.front-part {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--Light-grayish-violet);
+    overflow: hidden;
+}
+
+.front-part img {
+    width: 80px;
+    height: auto;
+}
+
+#card-number {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+
+#name-holder {
+    text-transform: uppercase;
+}
+
+.front-part > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#expmonth, 
+#expyear {
+    overflow: hidden;
+}
+
+#cvc-number {
+    color: var(--Light-grayish-violet);
+    position: absolute;
+    right: 50px;
+    top: 98px;
+    overflow: hidden;
+}

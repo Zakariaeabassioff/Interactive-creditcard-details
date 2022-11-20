@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon-32x32.png">
+    <title>Interactive card details</title>
+</head>
+<body>
+    <main>
+        <section class="left-side">
+
+        </section>
+        <section class="right-side">
+            <form action="">
+                <div>
+                    <label for="name">Cardholder name</label>
+                    <input id="name" type="text" placeholder="e.g. Jane appleseed" maxlength="20" required>
+                </div>
+                <div>
+                    <label for="number">Card number</label>
+                    <input id="number" type="number" placeholder="e.g. 1234 5678 9123 0000" min="0" max="9999999999999999" required>
+                </div>
+                <div class="expcvc">
+                    <div class="exp">
+                        <label for="monthyear">Exp. date (mm/yy)</label>
+                        <div class="exp-inputs">
+                            <input id="month" name="monthyear" type="number" placeholder="MM" min="1" max="12" required>
+                            <input id="year" name="monthyear" type="number" placeholder="YY" required>
+                        </div>
+                    </div>
+                    <div class="cvc">
+                        <label for="cvc">cvc</label>
+                        <input id="cvc" name="cvc" type="number" placeholder="e.g. 123" required>
+                    </div>
+                </div>
+                <button type="submit" id="confirm-btn">Confirm</button>
+            </form>
+        </section>
+        <div class="front-part">
+            <img src="images/card-logo.svg" alt="card logo">
+            <span id="card-number">0000 0000 0000 0000</span>
+            <div>
+                <span id="name-holder">full name</span>
+                <div>
+                    <span id="expmonth">00</span>/<span id="expyear">00</span>
+                </div>
+            </div>
+        </div>
+        <div class="back-part">
+            <span id="cvc-number">000</span>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
