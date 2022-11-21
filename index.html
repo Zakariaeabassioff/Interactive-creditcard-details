@@ -14,26 +14,30 @@
 
         </section>
         <section class="right-side">
-            <form action="">
+            <form action="" id="form">
                 <div>
                     <label for="name">Cardholder name</label>
-                    <input id="name" type="text" placeholder="e.g. Jane appleseed" maxlength="20" required>
+                    <input name="fullname" id="name" type="text" placeholder="e.g. Jane appleseed">
+                    <span class="error" id="name-error"></span>
                 </div>
                 <div>
                     <label for="number">Card number</label>
-                    <input id="number" type="number" placeholder="e.g. 1234 5678 9123 0000" min="0" max="9999999999999999" required>
+                    <input name="cardnumber" id="number" type="number" placeholder="e.g. 1234 5678 9123 0000">
+                    <span class="error" id="number-error"></span>
                 </div>
                 <div class="expcvc">
                     <div class="exp">
                         <label for="monthyear">Exp. date (mm/yy)</label>
                         <div class="exp-inputs">
-                            <input id="month" name="monthyear" type="number" placeholder="MM" min="1" max="12" required>
-                            <input id="year" name="monthyear" type="number" placeholder="YY" required>
+                            <input id="month" name="monthyear" type="number" placeholder="MM">
+                            <input id="year" name="monthyear" type="number" placeholder="YY">
                         </div>
+                        <span class="error" id="exp-error"></span>
                     </div>
                     <div class="cvc">
                         <label for="cvc">cvc</label>
-                        <input id="cvc" name="cvc" type="number" placeholder="e.g. 123" required>
+                        <input id="cvc" name="cvc" type="number" placeholder="e.g. 123">
+                        <span class="error" id="cvc-error"></span>
                     </div>
                 </div>
                 <button type="submit" id="confirm-btn">Confirm</button>

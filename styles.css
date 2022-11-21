@@ -192,3 +192,15 @@ label {
     top: 98px;
     overflow: hidden;
 }
+
+.error {
+    color: var(--Red);
+    font-size: .9rem;
+    padding: 5px;
+}
+
+.error-border {
+    border-color: var(--Red);
+}
+
+
